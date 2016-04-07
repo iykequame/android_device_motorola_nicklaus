@@ -11,6 +11,11 @@ allow system_server wmtWifi_device:chr_file w_file_perms;
 
 # Access sensor common devices
 allow system_server m_batch_misc_device:chr_file r_file_perms;
+
+# Persist
+allow system_server protect_s_data_file:dir r_dir_perms;
+
+# Sensors
 allow system_server hwmsensor_device:chr_file r_file_perms;
 
 # Access sensor bio devices
