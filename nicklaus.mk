@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
+# Power
+PRODUCT_PACKAGES += \
+    power.default \
+    power.mt6737m
+
 # Shims
 PRODUCT_PACKAGES += \
     libnicklaus
