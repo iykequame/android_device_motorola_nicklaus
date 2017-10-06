@@ -110,7 +110,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0
+    ro.kernel.android.checkjni=0 \
+    persist.force.gps.mode=gnss
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
