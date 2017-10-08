@@ -96,11 +96,6 @@ MTK_FM_SUPPORT := true
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
-
-# mrdump related
-PRODUCT_PACKAGES += \
-    libmrdump \
-    mrdump_tool
 		
 # GPS
 PRODUCT_PACKAGES += \
