@@ -50,7 +50,7 @@ TARGET_OTA_ASSERT_DEVICE := nicklaus,nicklaus,nicklaus,nicklaus,"nicklaus",nickl
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # Display
-BOARD_EGL_CFG := $(VENDOR_PATH)/proprietary/etc/egl.cfg
+BOARD_EGL_CFG := $(VENDOR_PATH)/vendor/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
