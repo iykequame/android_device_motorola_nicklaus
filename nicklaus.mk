@@ -9,6 +9,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Vendor Blobs
 $(call inherit-product, vendor/motorola/nicklaus/nicklaus-vendor.mk)
 
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Media
@@ -82,10 +83,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
@@ -93,38 +90,35 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     charger
-	
+
 # FMRadio
 MTK_FM_SUPPORT := true
 
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
-		
+
 # GPS
 PRODUCT_PACKAGES += \
-    gps.mt6737m 
+    gps.mt6737m
 
-ADDITIONAL_DEFAULT_PROPERTIES += 
-ro.secure=0 \
-ro.allow.mock.location=1 \
-ro.debuggable=1 \
-ro.adb.secure=0 \
-persist.service.acm.enable=0 \
-persist.sys.usb.config=mtp \
-ro.mount.fs=EXT4 \
-persist.radio.multisim.config=dsds \
-ro.mtk_lte_support=1 \
-ro.telephony.sim.count=2 \
-persist.gemini.sim_num=2 \
-ril.current.share_modem=2 \
-ro.telephony.ril_class=NicklausRIL \
-ro.telephony.ril.config=fakeiccid \
-ro.mtk_gps_support=1 \
-ro.mtk_agps_app=1 \
-persist.sys.display.clearMotion=0	
+# Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.mount.fs=EXT4 \
+    ro.allow.mock.location=0 \
+    ro.debuggable=1 \
+    persist.service.acm.enable=0 \
+    ro.config.low_ram=false
 
-#$(call inherit-product, build/target/product/full.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.android.checkjni=0
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.service.adb.enable=1
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -135,4 +129,3 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
