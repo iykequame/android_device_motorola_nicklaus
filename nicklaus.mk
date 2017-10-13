@@ -44,7 +44,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnicklaus
 
-# root
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
+
+# Root
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/fstab.mt6735:root/fstab.mt6735 \
     $(LOCAL_PATH)/rootdir/root/init.mt6735.rc:root/init.mt6735.rc \
