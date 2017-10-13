@@ -91,9 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger
 
-# FMRadio
-MTK_FM_SUPPORT := true
-
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
