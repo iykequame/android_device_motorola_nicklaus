@@ -37,6 +37,10 @@ ro.sys.usb.charging.only=yes
 ro.camera.sound.forced=0
 ro.audio.silent=0
 
+# Camera
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
 ro.zygote.preload.enable=0
 
 persist.sys.strictmode.visual=0

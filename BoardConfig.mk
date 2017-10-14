@@ -68,7 +68,10 @@ BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true							   
 MTK_HARDWARE := true
 
- # Cyanogen Hardware
+# Camera
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+
+# Cyanogen Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
 
