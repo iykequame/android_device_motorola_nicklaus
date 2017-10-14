@@ -16,7 +16,7 @@ Battery | Li-Pol 5000mAh battery
 Display | 720 x 1280 pixels, 5.5 inches
 Camera  | Main 13MP / Front 5MP, autofocus, LED flash
 
-#### Thanks to: rmmc & defer|Zormax|darklord4822|DeckerDU
+Thanks to: rmmc & defer | Zormax | darklord4822 | DeckerSU
 
 ![Moto E4 Plus]( https://www.motorola.com/sites/default/files/library/storage/products/smartphones/moto-e4-plus-NA-1000.png "Moto E4 Plus")
 
